@@ -548,12 +548,12 @@ class Authenticate:
 
             opts = []
             opts.append(constants.KDCOptions.forwardable.value)
-            opts.append(constants.KDCOptions.renewable.value)
+            #opts.append(constants.KDCOptions.renewable.value)
             opts.append(constants.KDCOptions.canonicalize.value)
             opts.append(constants.KDCOptions.enc_tkt_in_skey.value)
             opts.append(constants.KDCOptions.forwardable.value)
-            opts.append(constants.KDCOptions.renewable_ok.value)
-
+            #opts.append(constants.KDCOptions.renewable_ok.value)
+            print("Using Modified Ticket Flags")
             req_body["kdc-options"] = constants.encodeFlags(opts)
 
             server_name = Principal(
